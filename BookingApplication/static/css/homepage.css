@@ -1,3 +1,77 @@
 .fa-circle-user {
     font-size: 2rem;
 }
+
+
+#home {
+    height: min-content;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15rem 7rem;
+}
+
+#home-content h1 {
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: 102px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0655A0;
+}
+
+#home-content p {
+    font-family: Poppins;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.14em;
+    text-align: left;
+    color: #0655A0;
+}
+
+#works {
+    padding-top: 4rem;
+}
+
+.title-text {
+    font: Poppins;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+#work-steps {
+    display: flex;
+    justify-content: space-around;
+}
+
+.step {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+.step-text {
+    width: 80%;
+}
+
+.step i {
+    color: #0655a0;
+    font-size: 2.5rem
+}
+
+.step h5 {
+    color: #0655a0;
+}
+
+#works {
+    background: rgba(255, 87, 34, 0.11);
+    height: min-content;
+}
+
+.step-text p {
+    margin-right: 0;
+}

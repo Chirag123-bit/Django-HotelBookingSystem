@@ -7,5 +7,38 @@
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}"/>
 {% endblock css %}
 {% block content %}
-    <h1>Hello World</h1>
+    <section id="home"
+             style="background-image: url({% static 'images/home.png' %})">
+        <div id="home-content">
+            <h1>Buy, Sell, Rent</h1>
+            <p>The Best Deal for Travellers and Accomodators</p>
+            <button class="btn btn-warning text-white">Explore More</button>
+        </div>
+    </section>
+    <section id="works">
+        <h1 class="text-center title-text">How It Works?</h1>
+        <div id="work-steps">
+            <div class="step">
+                <i class="fa-solid fa-house"></i>
+                <div class="step-text">
+                    <h5>Find a Listing</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel esse earum nesciunt, saepe iusto non!</p>
+                </div>
+            </div>
+            <div class="step">
+                <i class="fa-solid fa-id-card"></i>
+                <div class="step-text">
+                    <h5>Talk To an Agent</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel esse earum nesciunt, saepe iusto non!</p>
+                </div>
+            </div>
+            <div class="step">
+                <i class="fa-solid fa-money-bill"></i>
+                <div class="step-text">
+                    <h5>Make the transaction</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel esse earum nesciunt, saepe iusto non!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock content %}
