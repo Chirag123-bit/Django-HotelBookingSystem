@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "bootstrap5",
-    "home.apps.HomeConfig"
+    "home.apps.HomeConfig",
+    "bookings.apps.BookingsConfig"
 ]
 
 MIDDLEWARE = [

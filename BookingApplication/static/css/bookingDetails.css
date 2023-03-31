@@ -1,0 +1,25 @@
+.details {
+    padding: 8rem;
+}
+
+#features {
+    margin: 2rem 0;
+    justify-content: space-between;
+}
+
+#features i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+#features .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#features .feature p {
+    font-weight: 600
+}

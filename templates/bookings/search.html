@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Listings
+{% endblock title %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock css %}
+{% block content %}
+    <section id="search" class="mt-5 py-4">
+        <h3 class="text-center">Accomodation Searching</h3>
+        <div id="searchbar-container">
+            <div class="search-cont">
+                <input type="text"
+                       id="searchbar"
+                       placeholder="Search for your dream listing"
+                       name="keyword"
+                       class="text-center">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="accomodation-cards d-flex justify-content-around mt-5 flex-wrap">
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeOne.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>Kathmandu, Nepal</h4>
+                    <h6>Rs. 50,0000</h6>
+                </div>
+                <div class="c-footer text-center">
+                    <a href="accomodation/">
+                        <div class="btn btn-warning text-ceter btn-md w-50">View Details</div>
+                    </a>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeTwo.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>Kathmandu, Nepal</h4>
+                    <h6>Rs. 50,0000</h6>
+                </div>
+                <div class="c-footer text-center">
+                    <div class="btn btn-warning text-ceter btn-md w-50">View Details</div>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeThree.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>Kathmandu, Nepal</h4>
+                    <h6>Rs. 50,0000</h6>
+                </div>
+                <div class="c-footer text-center">
+                    <div class="btn btn-warning text-ceter btn-md w-50">View Details</div>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeOne.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>Kathmandu, Nepal</h4>
+                    <h6>Rs. 50,0000</h6>
+                </div>
+                <div class="c-footer text-center">
+                    <a href="accomodation/">
+                        <div class="btn btn-warning text-ceter btn-md w-50">View Details</div>
+                    </a>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeTwo.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>Kathmandu, Nepal</h4>
+                    <h6>Rs. 50,0000</h6>
+                </div>
+                <div class="c-footer text-center">
+                    <div class="btn btn-warning text-ceter btn-md w-50">View Details</div>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeThree.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>Kathmandu, Nepal</h4>
+                    <h6>Rs. 50,0000</h6>
+                </div>
+                <div class="c-footer text-center">
+                    <div class="btn btn-warning text-ceter btn-md w-50">View Details</div>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeOne.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>Kathmandu, Nepal</h4>
+                    <h6>Rs. 50,0000</h6>
+                </div>
+                <div class="c-footer text-center">
+                    <a href="accomodation/">
+                        <div class="btn btn-warning text-ceter btn-md w-50">View Details</div>
+                    </a>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeTwo.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>Kathmandu, Nepal</h4>
+                    <h6>Rs. 50,0000</h6>
+                </div>
+                <div class="c-footer text-center">
+                    <div class="btn btn-warning text-ceter btn-md w-50">View Details</div>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeThree.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>Kathmandu, Nepal</h4>
+                    <h6>
+                        Rs. 50,0000
+                    </h6>
+                </div>
+                <div class="c-footer text-center">
+                    <div class="btn btn-warning text-ceter btn-md w-50">
+                        View Details
+                    </div>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeOne.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>
+                        Kathmandu, Nepal
+                    </h4>
+                    <h6>
+                        Rs. 50,0000
+                    </h6>
+                </div>
+                <div class="c-footer text-center">
+                    <a href="accomodation/">
+                        <div class="btn btn-warning text-ceter btn-md w-50">
+                            View Details
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeTwo.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>
+                        Kathmandu, Nepal
+                    </h4>
+                    <h6>
+                        Rs. 50,0000
+                    </h6>
+                </div>
+                <div class="c-footer text-center">
+                    <div class="btn btn-warning text-ceter btn-md w-50">
+                        View Details
+                    </div>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeThree.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>
+                        Kathmandu, Nepal
+                    </h4>
+                    <h6>
+                        Rs. 50,0000
+                    </h6>
+                </div>
+                <div class="c-footer text-center">
+                    <div class="btn btn-warning text-ceter btn-md w-50">
+                        View Details
+                    </div>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeOne.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>
+                        Kathmandu, Nepal
+                    </h4>
+                    <h6>
+                        Rs. 50,0000
+                    </h6>
+                </div>
+                <div class="c-footer text-center">
+                    <a href="accomodation/">
+                        <div class="btn btn-warning text-ceter btn-md w-50">
+                            View Details
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeTwo.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>
+                        Kathmandu, Nepal
+                    </h4>
+                    <h6>
+                        Rs. 50,0000
+                    </h6>
+                </div>
+                <div class="c-footer text-center">
+                    <div class="btn btn-warning text-ceter btn-md w-50">
+                        View Details
+                    </div>
+                </div>
+            </div>
+            <div class="ac-card m-3">
+                <div class="c-header">
+                    <img src="{% static 'images/homeThree.png' %}"
+                         alt="Home One"
+                         class="img-fluid">
+                </div>
+                <div class="c-body">
+                    <h4>
+                        Kathmandu, Nepal
+                    </h4>
+                    <h6>
+                        Rs. 50,0000
+                    </h6>
+                </div>
+                <div class="c-footer text-center">
+                    <div class="btn btn-warning text-ceter btn-md w-50">
+                        View Details
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

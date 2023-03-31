@@ -1,0 +1,25 @@
+#searchbar-container {
+    text-align: center;
+    margin-top: 2.5rem !important;
+    position: relative;
+}
+
+#searchbar-container {
+    width: 40%;
+    margin: auto;
+}
+
+#searchbar-container input {
+    width: 100%;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid orange;
+    font-size: 1.1rem;
+}
+
+#searchbar-container i {
+    color: orange;
+    position: absolute;
+    right: 3%;
+    top: 20%
+}
