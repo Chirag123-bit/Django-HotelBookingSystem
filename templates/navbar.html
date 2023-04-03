@@ -17,8 +17,35 @@
         <a class="nav-link" href="#">About</a>
       </div>
     </div>
-    <div class="profle-icon">
+    {% if user.is_authenticated %}
+      <div class="btn-group">
+        <div class="dropdown">
+          <button class="btn  dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+            <img src={{ user.profile.profile_pic.url }} alt="profilePic" srcset="" class="img-fluid" style="width:2rem">
+            {{ user.username }}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">My Bookings</a>
+            <a class="dropdown-item" href="#">My Profile</a>
+            <a class="dropdown-item" href="{% url 'logout-page' %}">Logout</a>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <div class="btn-group">
+        <a href="/user/login">
+          <div class="btn btn-sm btn-warning mx-3">Login</div>
+        </a>
+        <a href="/user/register">
+          <div class="btn btn-sm btn-success">Register</div>
+        </a>
+      </div>
+    {% endif %}
+    {% comment %} <div class="profle-icon">
       <i class="fa-solid fa-circle-user"></i>
-    </div>
+    </div> {% endcomment %}
   </div>
 </nav>
