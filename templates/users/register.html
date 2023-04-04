@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
     <form class="mt-5 pt-5" method="post">
         {% csrf_token %}
-        {{ form }}
+        {{ form|crispy }}
         <input type="submit" value="Register" class="btn btn-dark btn-block" />
     </form>
 {% endblock content %}
