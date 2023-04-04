@@ -74,109 +74,102 @@
                         data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner">
+            <div class="carousel-inner" style="max-height:100%">
                 <div class="carousel-item active">
-                    <img src="https://images5.alphacoders.com/112/thumb-1920-1123013.jpg"
-                         class="d-block w-100"
-                         alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
+                    <img src="{{ acc.image1.url }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://wallpaperaccess.com/full/2029165.jpg"
-                         class="d-block w-100"
-                         alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
+                    <img src="{{ acc.image2.url }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://wallpaperaccess.com/full/1859279.png"
-                         class="d-block w-100"
-                         alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                    <img src="{{ acc.image3.url }}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+                <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="details d-flex justify-content-between align-items-center">
+                <div class="left-content">
+                    <div class="top-content d-flex justify-content-between align-items-center">
+                        <div class="top-left">
+                            <h4>{{ acc.hotel.name }}</h4>
+                            <h6>{{ acc.name }}</h6>
+                        </div>
+                        <div class="top-right">
+                            <h5>Rs.{{ acc.price }}/Night</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex" id="features">
+                        {% if acc.hotel.wifi %}
+                            <div class="feature">
+                                <i class="fa-solid fa-wifi"></i>
+                                <p>Free Wifi</p>
+                            </div>
+                        {% endif %}
+                        {% if acc.hotel.water %}
+                            <div class="feature">
+                                <i class="fa-solid fa-shower"></i>
+                                <p>Water Facilities</p>
+                            </div>
+                        {% endif %}
+                        {% if acc.hotel.pickup %}
+                            <div class="feature">
+                                <i class="fa-solid fa-car"></i>
+                                <p>Airport Pickup/Drop</p>
+                            </div>
+                        {% endif %}
+                        {% if acc.hotel.allService %}
+                            <div class="feature">
+                                <i class="fa-sharp fa-solid fa-phone"></i>
+                                <p>24/7 Service</p>
+                            </div>
+                        {% endif %}
+                        {% if acc.hotel.telephone %}
+                            <div class="feature">
+                                <i class="fa-sharp fa-solid fa-bell-concierge"></i>
+                                <p>Concierge Services</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div id="room-description">
+                        <p >{{ acc.desc }}</p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="booking-card">
+                        <div class="form">
+                            <div class="image-container text-center m-auto mb-2">
+                                <img src="{{ acc.hotel.logo.url }}" alt="Hyatt" class="img-fluid">
+                            </div>
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="date-container">
+                                    <label for="checkin">Check In Date</label>
+                                    <input type="date" name="checkin" id="checkin" required>
+                                </div>
+                                <div class="date-container">
+                                    <label for="checkout">Check Out Date</label>
+                                    <input type="date" name="checkout" id="checkout" required>
+                                </div>
+                                <div class="book-btn text-center">
+                                    <button class="btn btn-warning btn-md text-white" type="submit">Book Now</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <div class="details d-flex justify-content-between align-items-center">
-            <div class="left-content">
-                <div class="top-content d-flex justify-content-between align-items-center">
-                    <div class="top-left">
-                        <h4>Hyatt Residence</h4>
-                        <h6>Deluxe Room</h6>
-                    </div>
-                    <div class="top-right">
-                        <h5>Rs.5500/Night</h5>
-                    </div>
-                </div>
-                <div class="d-flex" id="features">
-                    <div class="feature">
-                        <i class="fa-solid fa-wifi"></i>
-                        <p>Free Wifi</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fa-solid fa-shower"></i>
-                        <p>Water Facilities</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fa-solid fa-car"></i>
-                        <p>Airport Pickup/Drop</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fa-sharp fa-solid fa-phone"></i>
-                        <p>24/7 Service</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fa-sharp fa-solid fa-bell-concierge"></i>
-                        <p>Telephone Services</p>
-                    </div>
-                </div>
-                <div id="room-description">
-                    <p >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vel iure corrupti eius unde numquam, voluptates, ducimus non magnam reprehenderit aliquam rem saepe modi explicabo recusandae odit minima aperiam eligendi rerum nulla est provident. Quidem, consequuntur unde impedit corrupti atque, provident aspernatur deleniti sed facere, dolorum earum nihil commodi corporis quisquam inventore quod aperiam quam quibusdam nostrum perspiciatis cupiditate tempore. Nulla, reiciendis dignissimos cupiditate eaque cum assumenda, delectus, perferendis molestiae error odit hic quia voluptatum eos qui asperiores aliquam. Ullam quisquam ipsum recusandae. Vero, aliquam a sit accusantium voluptatem voluptas. Similique quidem dolorem quam vitae! Velit cum pariatur aliquid beatae quo perspiciatis, saepe aut, culpa, fugiat neque atque? Minus cumque inventore incidunt rerum sed esse porro fuga commodi facilis est delectus reprehenderit ullam eveniet ab quod ipsam illo, officia repellat quos, facere voluptates ad. Minus atque culpa facilis dolores animi porro maiores necessitatibus, doloribus quibusdam, inventore dolor, architecto dolorem et vitae optio quis? Dolorem, magnam. Molestias aut libero illo, itaque nemo debitis atque saepe qui repellendus delectus sint vero deleniti aspernatur nulla in dolore eaque dicta architecto voluptatum! Fugiat ex dolorem nesciunt saepe aliquam ad itaque beatae quia nulla asperiores! Dicta facere ipsa corporis laboriosam possimus quia ipsum, numquam similique!
-                    </p>
-                </div>
-            </div>
-            <div class="right-content">
-                <div class="booking-card">
-                    <div class="form">
-                        <div class="image-container text-center m-auto mb-2">
-                            <img src="{% static 'images/hyatt.png' %}" alt="Hyatt" class="img-fluid">
-                        </div>
-                        <div class="date-container">
-                            <label for="checkin">Check In Date</label>
-                            <input type="date" name="checkin" id="checkin">
-                        </div>
-                        <div class="date-container">
-                            <label for="checkout">Check Out Date</label>
-                            <input type="date" name="checkout" id="checkout">
-                        </div>
-                        <div class="book-btn text-center">
-                            <button class="btn btn-warning btn-md text-white">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-{% endblock content %}
+        </section>
+    {% endblock content %}
