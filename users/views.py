@@ -8,6 +8,7 @@ from . forms import ProfileUpdateForm, UserUpdateForm
 
 
 def register(request):
+    # form = UserCreationForm()
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
