@@ -32,3 +32,14 @@ def accomodationDetail(request,id):
 
 def getAccomodations(request):
     return render(request, "bookings/search.html")
+
+
+def myBookings(request):
+    bookings={}
+    if(request.user):
+        bookings = booking.objects.filter(user = request.user)
+    context={
+        "books":bookings
+    }
+    
+    return render(request,"bookings/mybookings.html",context)
