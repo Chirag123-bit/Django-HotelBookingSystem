@@ -4,6 +4,16 @@ from .models import Accomodations,booking
 
 def accomodationDetail(request,id):
     accomodation = Accomodations.objects.get(id=id)
+    bookings = booking.objects.filter(accomodation = accomodation)
+    valid = True
+    if request.user:
+        for i in bookings:
+            if i.user == request.user:
+                print("Found")
+                valid=False
+            else:
+                print("Not Found")
+
     if(request.method=="POST"):
         data = request.POST
         checkin = data.get("checkin")
@@ -15,9 +25,9 @@ def accomodationDetail(request,id):
         return redirect(f"/accomodation/{id}")
 
     context={
-        "acc":accomodation
+        "acc":accomodation,
+        "valid":valid
     }
-    print(context)
     return render(request, "bookings/accomodation.html",context)
 
 def getAccomodations(request):

@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import PasswordChangeForm
 from . forms import RegisterForm
 from . forms import ProfileUpdateForm, UserUpdateForm
 
@@ -40,3 +40,18 @@ def profile(request):
         "p_form":p_form
     }
     return render(request, "users/profile.html",context)
+
+
+
+def changePassword(request):
+    if(request.method=="POST"):
+        form = PasswordChangeForm(user=request.user, data = request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = PasswordChangeForm(user = request.user)
+
+    context ={
+        "form":form
+    }
+    return render(request, "users/change.html", context)

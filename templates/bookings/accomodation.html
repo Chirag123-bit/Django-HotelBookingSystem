@@ -163,9 +163,17 @@
                                     <label for="checkout">Check Out Date</label>
                                     <input type="date" name="checkout" id="checkout" required>
                                 </div>
-                                <div class="book-btn text-center">
-                                    <button class="btn btn-warning btn-md text-white" type="submit">Book Now</button>
-                                </div>
+                                {% if user.is_authenticated %}
+                                    {% if valid %}
+                                        <div class="book-btn text-center">
+                                            <button class="btn btn-warning btn-md text-white" type="submit">Book Now</button>
+                                        </div>
+                                    {% else %}
+                                        <p>Already Booked</p>
+                                    {% endif %}
+                                {% else %}
+                                    <p>Please Login To Book</p>
+                                {% endif %}
                             </form>
                         </div>
                     </div>
